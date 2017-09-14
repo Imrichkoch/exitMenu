@@ -3,8 +3,6 @@ package menuexit;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -35,12 +33,8 @@ public class MenuExit extends JFrame {
 		menu.add(exit);
 		menuBar.add(menu);
 		this.setJMenuBar(menuBar);
-		exit.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
+
+		exit.addActionListener(e -> System.exit(0));
 
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension dim = tk.getScreenSize();
